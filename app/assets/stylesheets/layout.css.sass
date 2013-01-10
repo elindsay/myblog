@@ -1,0 +1,59 @@
+body
+  font-family: Verdana, Geneva, sans-serif
+a
+  color: #777
+  text-decoration: none
+  &:hover
+    color: black
+
+#header
+  background-color: rgba(200, 200, 200, 0.1)
+  font-size: 18px
+  height: 10px
+  .login, .home
+    float: right
+    display: none
+  &:hover
+    height: 45px
+    .login, .home
+      display: block
+      padding-top: 10px
+    .home
+      float: left
+      padding-left: 10px
+    .login
+      float: right
+      padding-right: 10px
+      a
+        margin-right: 5px
+
+#signup, #login
+  float: left
+  font-family: Verdana, Geneva, sans-serif
+  font-size: 20px
+  color: #777
+  margin-top: 40px
+  margin-left: 80px
+  p
+    padding: 10px 0px
+  label
+    float: left
+    clear: left
+    width: 200px
+    color: #777
+  input[type=text], input[type=password]
+    float: left
+    border: 2px solid #CCC
+    height: 20px
+    width: 300px
+    font-size: 20px
+    color: #777
+  input[type=submit]
+    float: left
+    clear: left
+    margin-left: 200px
+    color: white
+    background-color: #DDD
+    border: none
+    font-size: 20px
+    padding: 6px 30px

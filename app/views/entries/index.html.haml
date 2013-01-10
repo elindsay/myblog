@@ -1,4 +1,7 @@
 - if current_user
-  = link_to "New", new_entry_path
-- @entries.each do |entry|
-  = link_to entry.title, entry_path(entry)
+  .new_entry_link
+    = link_to "New", new_entry_path
+
+.entries_list
+  - @entries.each do |entry|
+    = link_to entry.title, entry_path(entry)

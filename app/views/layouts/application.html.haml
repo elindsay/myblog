@@ -6,12 +6,15 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #login
-      - if current_user
-        = link_to "Log out", log_out_path
-      - else
-        = link_to "Sign up", new_user_path
-        = link_to "Log in", log_in_path
+    #header
+      .home
+        = link_to "Home", root_path 
+      .login
+        - if current_user
+          = link_to "Log out", log_out_path
+        - else
+          = link_to "Sign up", new_user_path
+          = link_to "Log in", log_in_path
 
     #flash
       - flash.each do |key, value|
