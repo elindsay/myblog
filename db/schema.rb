@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110060134) do
+ActiveRecord::Schema.define(:version => 20130112043829) do
 
   create_table "entries", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,19 @@ ActiveRecord::Schema.define(:version => 20130110060134) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "nvc_trigger_journal_entries", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "trigger_object"
+    t.text     "my_feelings"
+    t.text     "my_needs"
+    t.text     "my_request"
+    t.text     "her_his_feelings"
+    t.text     "her_his_needs"
+    t.text     "my_amended_request"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "users", :force => true do |t|

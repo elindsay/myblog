@@ -1,0 +1,8 @@
+- if current_user
+  .new_entry_link
+    = link_to "New NVC Trigger Journal Entry", new_nvc_trigger_journal_entry_path
+
+.entries_list
+  - @nvc_trigger_entries.each do |nvc_entry|
+    %p
+      = link_to nvc_entry.trigger_object, nvc_trigger_journal_entry_path(nvc_entry)

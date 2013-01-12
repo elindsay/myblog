@@ -1,0 +1,31 @@
+.change_nvc_trigger_entry
+  = form_for @nvc_trigger_entry do |f|
+    - if @nvc_trigger_entry.errors.any?
+      - @nvc_triggerentry.errors.full_messages.each do |msg|
+        = msg
+
+    %p
+      = f.label :trigger_object, "Trigger observation"
+      = f.text_area :trigger_object
+
+    %p
+      = f.label :my_feelings
+      = f.text_field :my_feelings
+    %p
+      = f.label :my_needs
+      = f.text_field :my_needs
+    %p
+      = f.label :my_request
+      = f.text_area :my_request
+    %p
+      = f.label :her_his_feelings, "Her/His feelings"
+      = f.text_field :her_his_feelings
+    %p
+      = f.label :her_his_needs, "Her/His needs"
+      = f.text_field :her_his_needs
+    %p
+      = f.label :my_amended_request
+      = f.text_area :my_amended_request
+
+    %p
+      = f.submit "Save"
