@@ -4,4 +4,5 @@
 
 .entries_list
   - @entries.each do |entry|
-    = link_to entry.title, entry_path(entry)
+    %p
+      = link_to entry.title, entry_path(entry)
