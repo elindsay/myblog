@@ -6,6 +6,7 @@ Myblog::Application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :feelings_and_needs, only: [:index, :create]
   resources :entries
   resources :nvc_trigger_journal_entries
 end
